@@ -1,0 +1,46 @@
+/* dark-mode.css - 深色模式專用樣式 */
+body.dark-mode {
+  --card-bg: #23272f;
+  --page-bg: #181c22;
+  --border-radius: 1.25rem;
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.45);
+  --success-color: #4be38a;
+  --danger-color: #ff6b81;
+  --warning-color: #ffc048;
+  --info-color: #3ecfff;
+  --critical-color: #ff6b81;
+  --warning-color-light: #3a2c00;
+  --normal-color-light: #1a2636;
+  color-scheme: dark;
+}
+.dark-mode .navbar-custom {
+  background: linear-gradient(135deg, #23272f 0%, #2e3a4b 100%);
+}
+.dark-mode .stats-bar,
+.dark-mode .alert-panel,
+.dark-mode .kpi-card,
+.dark-mode .chart-container {
+  background: #23272f;
+  color: #f1f4f7;
+}
+.dark-mode .breadcrumb-item a {
+  color: #8ecfff;
+}
+.dark-mode .click-card {
+  background: #23272f;
+  color: #f1f4f7;
+}
+.dark-mode .click-card::after {
+  background: linear-gradient(135deg, #3ecfff 0%, #4be38a 100%);
+}
+.dark-mode .card-overlay-label {
+  background: rgba(0, 0, 0, 0.85);
+}
+.dark-mode .progress-thin {
+  background-color: #23272f;
+}
+.dark-mode .progress-bar {
+  filter: brightness(1.2);
+}

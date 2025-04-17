@@ -1,0 +1,29 @@
+/* base.css - 全域變數與基本樣式 */
+:root {
+  --brand-grad: linear-gradient(135deg, #06beb6 0%, #48b1bf 100%);
+  --card-bg: #ffffff;
+  --page-bg: #f1f4f7;
+  --success-color: #28c76f;
+  --danger-color: #ea5455;
+  --warning-color: #ff9f43;
+  --info-color: #00cfe8;
+  --border-radius: 1.25rem;
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.15);
+  --transition-normal: all 0.3s ease;
+  --critical-color: #ff4961;
+  --warning-color-light: #ffe0b2;
+  --normal-color-light: #e3f2fd;
+}
+body {
+  background: var(--page-bg);
+  font-family: 'Inter', 'Noto Sans TC', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 700;
+}
