@@ -279,13 +279,14 @@ function openMachine(pid, alabel, mno) {
 function viewMachine(alabel, mno) {
   const productH = Math.round(Math.random() * 100);
   const machineH = Math.round(Math.random() * 100);
+
   container.innerHTML = `
     <div class="row g-4 align-items-center">
       <div class="col-12 col-lg-6"><img src="${
         data.machineImg
       }" class="cartoon-img shadow-sm" alt="Machine ${mno}"></div>
       <div class="col-12 col-lg-6">
-        <div class="p-4 bg-white rounded-4 shadow-sm">
+        <div class="p-4 bg-white dark-mode:bg-dark rounded-4 shadow-sm">
           <h4 class="mb-4">${alabel}｜機台 ${mno}</h4>
           <p class="fs-5 d-flex align-items-center gap-2">${dot(
             productH > 50 ? 'green' : 'red',
@@ -293,6 +294,12 @@ function viewMachine(alabel, mno) {
           <p class="fs-5 d-flex align-items-center gap-2">${dot(
             machineH > 50 ? 'green' : 'red',
           )} 機台健康度 <span class="ms-auto fw-semibold">${machineH}%</span></p>
+
+          <hr class="my-4" />
+          <div class="form-check form-switch d-flex align-items-center">
+            <input class="form-check-input" type="checkbox" id="optimizeSwitch" checked onchange="toggleOptimization(this, '${alabel}', ${mno})">
+            <label class="form-check-label ms-2" for="optimizeSwitch">自動優化機台程式</label>
+          </div>
         </div>
       </div>
     </div>`;
